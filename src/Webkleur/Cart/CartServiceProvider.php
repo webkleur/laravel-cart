@@ -1,4 +1,4 @@
-<?php namespace Darryldecode\Cart;
+<?php namespace Webkleur\Cart;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Darryldecode\\": "src/Webkleur"
+            "Webkleur\\": "src/Webkleur"
         }
     },
     "minimum-stability": "dev",

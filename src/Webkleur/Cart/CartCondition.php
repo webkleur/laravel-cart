@@ -1,7 +1,7 @@
-<?php namespace Darryldecode\Cart;
-use Darryldecode\Cart\Exceptions\InvalidConditionException;
-use Darryldecode\Cart\Helpers\Helpers;
-use Darryldecode\Cart\Validators\CartConditionValidator;
+<?php namespace Webkleur\Cart;
+use Webkleur\Cart\Exceptions\InvalidConditionException;
+use Webkleur\Cart\Helpers\Helpers;
+use Webkleur\Cart\Validators\CartConditionValidator;
 
 /**
  * Created by PhpStorm.

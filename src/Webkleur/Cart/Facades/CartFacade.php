@@ -1,4 +1,4 @@
-<?php namespace Darryldecode\Cart\Facades;
+<?php namespace Webkleur\Cart\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

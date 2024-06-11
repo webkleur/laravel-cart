@@ -1,14 +1,14 @@
-<?php namespace Darryldecode\Cart;
+<?php namespace Webkleur\Cart;
 
-use Darryldecode\Cart\Exceptions\InvalidConditionException;
-use Darryldecode\Cart\Exceptions\InvalidItemException;
-use Darryldecode\Cart\Helpers\Helpers;
-use Darryldecode\Cart\Validators\CartItemValidator;
-use Darryldecode\Cart\Exceptions\UnknownModelException;
+use Webkleur\Cart\Exceptions\InvalidConditionException;
+use Webkleur\Cart\Exceptions\InvalidItemException;
+use Webkleur\Cart\Helpers\Helpers;
+use Webkleur\Cart\Validators\CartItemValidator;
+use Webkleur\Cart\Exceptions\UnknownModelException;
 
 /**
  * Class Cart
- * @package Darryldecode\Cart
+ * @package Webkleur\Cart
  */
 class Cart
 {
@@ -287,11 +287,11 @@ class Cart
     public function addItemCondition($productId, $itemCondition)
     {
         if ($product = $this->get($productId)) {
-            $conditionInstance = "\\Darryldecode\\Cart\\CartCondition";
+            $conditionInstance = "\\Webkleur\\Cart\\CartCondition";
 
             if ($itemCondition instanceof $conditionInstance) {
                 // we need to copy first to a temporary variable to hold the conditions
-                // to avoid hitting this error "Indirect modification of overloaded element of Darryldecode\Cart\ItemCollection has no effect"
+                // to avoid hitting this error "Indirect modification of overloaded element of Webkleur\Cart\ItemCollection has no effect"
                 // this is due to laravel Collection instance that implements Array Access
                 // // see link for more info: http://stackoverflow.com/questions/20053269/indirect-modification-of-overloaded-element-of-splfixedarray-has-no-effect
                 $itemConditionTempHolder = $product['conditions'];
@@ -369,7 +369,7 @@ class Cart
             return $this;
         }
 
-        if (!$condition instanceof CartCondition) throw new InvalidConditionException('Argument 1 must be an instance of \'Darryldecode\Cart\CartCondition\'');
+        if (!$condition instanceof CartCondition) throw new InvalidConditionException('Argument 1 must be an instance of \'Webkleur\Cart\CartCondition\'');
 
         $conditions = $this->getConditions();
 
@@ -502,7 +502,7 @@ class Cart
             // on the given condition name the user wants to remove, if so,
             // lets just make $item['conditions'] an empty array as there's just 1 condition on it anyway
             else {
-                $conditionInstance = "Darryldecode\\Cart\\CartCondition";
+                $conditionInstance = "Webkleur\\Cart\\CartCondition";
 
                 if ($item['conditions'] instanceof $conditionInstance) {
                     if ($tempConditionsHolder->getName() == $conditionName) {
@@ -770,7 +770,7 @@ class Cart
             return count($item['conditions']) > 0;
         }
 
-        $conditionInstance = "Darryldecode\\Cart\\CartCondition";
+        $conditionInstance = "Webkleur\\Cart\\CartCondition";
 
         if ($item['conditions'] instanceof $conditionInstance) return true;
 

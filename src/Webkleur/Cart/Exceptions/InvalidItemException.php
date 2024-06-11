@@ -1,4 +1,4 @@
-<?php namespace Darryldecode\Cart\Exceptions;
+<?php namespace Webkleur\Cart\Exceptions;
 
 /**
  * Created by PhpStorm.

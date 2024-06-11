@@ -1,5 +1,5 @@
 <?php
-namespace Darryldecode\Tests\helpers;
+namespace Webkleur\Tests\helpers;
 
 use Illuminate\Contracts\Database\ModelIdentifier;
 
